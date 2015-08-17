@@ -1,5 +1,7 @@
 class PlayingController < ApplicationController
   def ask
+    @query = params[:query]
+    @answer = coach_answer(@query)
   end
 
   def answer
